@@ -1,0 +1,33 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="CountPeople.controller.App">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Panel class="sapUiResponsiveMargin" width="auto">
+						<content>
+							<HBox>
+								<!--input doesnt work because input tend to be long, and text is not able to the input properly-->
+								<TextArea id="__input0" placeholder="Enter the list of email addresses from the Outlook." rows="8" class="sapUiSmallMargin"/>
+								<VBox>
+									<Button text="Calculate" width="100px" id="__button0" press="setInput" class="sapUiSmallMargin" type="Accept"/>
+									<Button text="Clear Input" width="100px" id="bClearInput" press="clearInput" class="sapUiSmallMargin" type="Reject"/>
+								</VBox>
+							</HBox>
+							<HBox>
+								<Text text="No text specified" maxLines="0" id="__text1" class="sapUiSmallMargin"/>
+							</HBox>
+						</content>
+					</Panel>
+				</content>
+				<footer>
+					<Toolbar>
+						<Button text="CSV" id="bExCSV" press="exCSV" class="sapUiSmallMargin" visible="true"/>
+						<Button text="TXT" id="bExTXT" press="exTXT" class="sapUiSmallMargin" visible="true"/>
+						<ToolbarSpacer/>
+						<Button text="Exit" id="bExit" press="exit" class="sapUiSmallMargin" type="Reject" visible="true"/>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
